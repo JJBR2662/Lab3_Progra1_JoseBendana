@@ -18,41 +18,35 @@ public class Lab3Progra1JoseBendaña {
                     for (int c = 0;c<cadena.length();c++){
                         char caracter = cadena.charAt(c);
                         String comp = ""+caracter;
-//                        if (comp = punto);
                     }
 
                 case 2:
                     Scanner caso2 = new Scanner(System.in);
                     System.out.print("Ingrese un numero: ");
                     int k = caso2.nextInt();
-                    double den3 = 0.0;
-                    double respnk = 0.0;
+                    double respnk=0;
                     double resp = 0.0;
                     double resptotal = 0.0;
                     double temp = 0.0;
-                    int copiak = k;
-                    double copiaden3=0.0;
-                    for (int n = 1; n <= copiak; n++) {
-                        double nominador = (2 * n) + 1;
-                        double denominador = (n * n) + 3;
-                        for(double den2 = denominador;den2>0;den2--){
-                            den3=den3 + (den2*den2-1);
+                    double nominador = 0.00;
+                    double denominador= 0.00;  
+                    for (int n = 1; n <= k; n++) {
+                        nominador = (2 * n) + 1;
+                        denominador = (n * n) + 3;
+                        double den3=1.00;
+                        for(double den2 = 1;den2<=denominador;den2++){
+                            den3*=den2;
                         }
-                        denominador = den3/2;
-
-                        for (int i = 1; i <= copiak; i++) {
-                            respnk = n * n;
-                            temp = respnk * n;
-                        }
-
-                        resp = (nominador / denominador) * temp;
-
+                        denominador = den3;
+                        resp = nominador/denominador;
+                        resptotal += resp;
                     }
-                    resptotal = resptotal + resp;
                     System.out.println("La respuesta es: " + resptotal);
                     break;
                 case 3:
-                    System.out.println("hola");
+                    Scanner caso3 = new Scanner(System.in);
+                    System.out.println("Ingrese la altura: ");
+                    int altura = caso3.nextInt();
                     break;
             }        
         }while (ejercicio > 0 && ejercicio <4);
